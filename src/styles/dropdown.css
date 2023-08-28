@@ -1,0 +1,136 @@
+.dropdown {
+    width: 100%;
+    position: relative;
+}
+.dropdown__button {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+    border: 0;
+    line-height: 24px;
+    align-items: center;
+    font-size: 16px;
+    color: #1B1B1B;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border-bottom: 2px solid #7D7D7D;
+    padding: 0 0 6px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown__button:hover {
+    border-color: #3E29E3;
+}
+.dropdown__button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+    transition: 200ms ease;
+}
+.dropdown__button_active::after {
+    transform: translateY(-50%) rotate(-180deg);
+}
+.dropdown__list {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    border: 0;
+    left: 0;
+    top: 30px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms ease;
+    border-top: 2px solid #3E29E3 ;
+}
+.dropdown__list_visible {
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown__list-item {
+    margin: 0;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    color: #444;
+    transition: 200ms ease;
+}
+.dropdown__list-item_active {
+    background: #FFFFFF;
+    color: #3E29E3;
+}
+.dropdown__list-item:hover {
+    background: #3E29E3;
+    color: #FFFFFF;
+}
+.dropdown__input_hidden {
+    display: none;
+}
+
+.arrow-dropdown {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transition: 0.3s ease-out;
+}
+
+.dropdown__container {
+    position: relative;
+    display: flex;
+}
+.dropdown__button_active .arrow-dropdown {
+    transform: rotate(0.5turn);
+}
+
+.dropdown__button_active .dropdown__button {
+    pointer-events: none;
+}
+
+.dropdown__button__disabled {
+    justify-content: space-between;
+    outline: none;
+    border: 0;
+    line-height: 24px;
+    align-items: center;
+    font-size: 16px;
+    color: #1B1B1B;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border-bottom: 2px solid #7D7D7D;
+    padding: 0 0 6px 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.dropdown__button__hovered {
+    justify-content: space-between;
+    outline: none;
+    border: 0;
+    line-height: 24px;
+    align-items: center;
+    font-size: 16px;
+    color: #1B1B1B;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border-bottom: 2px solid #3E29E3;
+    padding: 0 0 6px 0;
+    pointer-events: none;
+    transition: 0.3s;
+}

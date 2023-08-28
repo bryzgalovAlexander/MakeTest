@@ -1,0 +1,407 @@
+@import "checkbox.css";
+@import "input.css";
+@import "modal.css";
+@import "radio.css";
+@import "button.css";
+@import "accordion.css";
+@import "dropdown.css";
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: url("../fonts/GraphikLCG-Bold.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: url("../fonts/GraphikLCG-Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: url("../fonts/GraphikLCG-Medium.woff2");
+    font-weight: 500;
+}
+
+* {
+    padding: 0;
+    font-family: "Graphik LCG";
+}
+
+#pic-desk {
+    width: 100%;
+}
+
+#pic-tab {
+    width: 100%;
+}
+
+#pic-mob {
+    width: 100%;
+}
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    color: #1B1B1B;
+}
+
+a {
+    padding-bottom: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #3E29E3;
+    border: 0;
+}
+
+a:hover {
+    color: #1B1B1B;
+}
+
+a:first-child {
+    margin-top: 184px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 24px 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 48px 0 32px 0;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0;
+}
+
+.p_lead {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.p_24 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.p_18 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.p_16 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.p_14 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.p_14g {
+    color: #7D7D7D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.container {
+    max-width: 1312px;
+    margin: 0 auto;
+    display: grid;
+    gap: 32px 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    'header header header header'
+    'sidebar content content content';
+}
+
+.header__box {
+    padding: 32px 0;
+    background-color: #fff;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.header__title {
+    width: 213px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__grid__ui-cells {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.main__grid__checkbox-cells {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.ui__flex__column {
+    display: flex;
+    flex-flow: column;
+}
+
+.form__notification {
+    margin: 12px 0 40px 0;
+}
+
+:last-child {
+    margin-bottom: 0;
+}
+
+.main__grid__grid-cells {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.grid__notification__margin {
+    margin-bottom: 8px;
+}
+
+.typo__box {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    'typo-name typo typo';
+    gap: 32px 32px;
+    margin: 48px 0;
+}
+
+.typo__line {
+    position: relative;
+    top: -2px;
+    height: 2px;
+    background-color: #CBCBCC;
+    z-index: -1;
+}
+
+.typo__name {
+    grid-area: typo-name;
+}
+
+.typo__example {
+    grid-area: typo;
+}
+
+.typo__btn {
+    background-color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 0;
+    margin-top: 34px;
+    color: #7D7D7D;
+    margin-right: 32px;
+    pointer-events: none;
+    border-bottom: 2px solid #CBCBCC;
+}
+
+.width__focus {
+    border-color: #3E29E3;
+}
+
+header {
+    grid-area: header;
+    background-color: #e3e3e3;
+}
+
+aside {
+    grid-area: sidebar;
+    z-index: 2;
+    position: sticky;
+    top: 104px;
+}
+
+main {
+    grid-area: content;
+}
+
+.main__grid__cell {
+    height: 60px;
+    margin-bottom: 48px;
+}
+
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__box {
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    position: sticky;
+    top: 104px;
+    z-index: 1;
+}
+
+.typo__width-mode {
+    display: flex;
+}
+
+.the-end {
+    margin: 100px 0 50px;
+    display: flex;
+    justify-content: center
+}
+
+@media (max-width: 928px) {
+    main {
+        margin: 0 8px;
+    }
+
+    .typo__box {
+        align-items: center;
+        margin: 24px 0;
+    }
+
+    aside {
+        grid-area: sidebar;
+        position: sticky;
+        top: 72px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        gap: 32px 32px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            'header header header header'
+            'sidebar sidebar sidebar sidebar'
+            'content content content content';
+    }
+
+    .sidebar__box {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row;
+    }
+
+    a:first-child {
+        margin: 0
+    }
+
+    .main__grid__cell {
+        margin-bottom: 24px;
+    }
+
+    #img {
+        height: 200px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .main__grid__ui-cells {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .main__grid__grid-cells {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .typo__example {
+        display: flex;
+        justify-content: end;
+        text-align: end;
+    }
+
+    .header__box {
+        padding: 16px 8px;
+    }
+}
+
+@media (max-width: 424px) {
+    .main__grid__checkbox-cells {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    a:first-child {
+        margin-top: 0;
+    }
+
+    .main__grid__ui-cells {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .main__grid__cell {
+        margin-bottom: 24px;
+    }
+
+    .main__grid__grid-cells {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin: 24px 0;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .p_lead {
+        font-size: 20px;
+    }
+
+    .p_24 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}

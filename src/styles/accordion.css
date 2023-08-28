@@ -1,0 +1,60 @@
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px 0 16px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    color: #1B1B1B;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    transition: 0.4s;
+    border-bottom: 1px solid #CBCBCC;
+}
+
+.hovered {
+    border-color: #3E29E3;
+    pointer-events: none;
+}
+
+.disabled {
+    pointer-events: none;
+    color: #7D7D7D;
+}
+
+.panel__content {
+    padding: 8px 0 30px 0;
+    border-bottom: 2px solid #3E29E3;
+    color: #1B1B1B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.accordion:hover {
+    border-color: #3E29E3;
+}
+
+.active {
+    color: #3E29E3;
+    border-color: #fff;
+}
+
+.arrow {
+    transition: 0.3s ease-out;
+}
+
+.active .arrow {
+    transform: rotate(0.5turn);
+}
+
+.panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
